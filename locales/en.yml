@@ -1,7 +1,7 @@
 en:
   lita:
     handlers:
-      karma:
+      conferenz:
         already_linked: "%{source} is already linked to %{target}."
         already_unlinked: "%{source} is not linked to %{target}."
         callable_required: must be a callable object
@@ -15,18 +15,18 @@ en:
           decrement_key: TERM--
           decrement_value: Decrements TERM by one.
           check_key: TERM~~
-          check_value: Shows the current karma of TERM.
+          check_value: Shows the current conferenz of TERM.
           link_key: TERM1 += TERM2
           link_value: Links TERM2 to TERM1.
           unlink_key: TERM1 -= TERM2
           unlink_value: Unlinks TERM2 from TERM1.
-          list_worst_key: "karma worst [N]"
-          list_worst_value: Lists the bottom N terms by karma. N defaults to 5.
-          list_best_key: "karma best [N]"
-          list_best_value: Lists the top N terms by karma. N defaults to 5.
-          modified_key: karma modified TERM
+          list_worst_key: "conferenz worst [N]"
+          list_worst_value: Lists the bottom N terms by conferenz. N defaults to 5.
+          list_best_key: "conferenz best [N]"
+          list_best_value: Lists the top N terms by conferenz. N defaults to 5.
+          modified_key: conferenz modified TERM
           modified_value: Lists the names of users who have upvoted or downvoted TERM.
-          delete_key: karma delete TERM
+          delete_key: conferenz delete TERM
           delete_value: >-
             Permanently removes TERM and all its link information. TERM is matched
             exactly as typed and does not adhere to the usual pattern for terms.
@@ -36,5 +36,5 @@ en:
         no_terms: There are no terms being tracked yet.
         threshold_not_satisfied: >-
           Terms must have less than or equal to -%{threshold} or greater than or equal to
-          %{threshold} karma to be linked or linked to.
+          %{threshold} conferenz to be linked or linked to.
         unlink_success: "%{source} has been unlinked from %{target}."
