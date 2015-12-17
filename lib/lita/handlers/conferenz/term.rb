@@ -70,8 +70,8 @@
     end
 
     def link(other)
-      if config.link_karma_threshold
-        threshold = config.link_karma_threshold.abs
+      if config.link_conferenz_threshold
+        threshold = config.link_conferenz_threshold.abs
 
         if own_score.abs < threshold || other.own_score.abs < threshold
           return threshold

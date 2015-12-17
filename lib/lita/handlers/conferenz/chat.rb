@@ -1,5 +1,4 @@
 module Lita::Handlers::Conferenz
-  # Tracks karma points for arbitrary terms.
   class Chat < Lita::Handler
     namespace "conferenz"
 
@@ -152,7 +151,7 @@ module Lita::Handlers::Conferenz
         %r{^conferenz\s+delete},
         :delete,
         command: true,
-        restrict_to: :karma_admins,
+        restrict_to: :conferenz_admins,
         help: { t("help.delete_key") => t("help.delete_value") }
       )
 
@@ -194,8 +193,8 @@ module Lita::Handlers::Conferenz
     end
 
     # To ensure that constructs like foo++bar or foo--bar (the latter is
-    # common in some URL generation schemes) do not cause errant karma
-    # modifications, force karma tokens be followed by whitespace (in a zero-
+    # common in some URL generation schemes) do not cause errant conferenz
+    # modifications, force conferenz tokens be followed by whitespace (in a zero-
     # width, look-ahead operator) or the end of the string.
     def token_terminator
       %r{(?:(?=\s)|$)}

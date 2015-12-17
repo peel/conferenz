@@ -6,8 +6,8 @@ module Lita::Handlers::Conferenz
       term.to_s.downcase.strip
     end
 
-    config :cooldown, types: [Integer, nil], default: 300
-    config :link_karma_threshold, types: [Integer, nil], default: 10
+    config :cooldown, types: [Integer, nil], default: 0
+    config :link_conferenz_threshold, types: [Integer, nil], default: 0
     config :term_pattern, type: Regexp, default: /[\[\]\p{Word}\._|\{\}]{2,}/
     config :term_normalizer, default: default_term_normalizer do
       validate do |value|
