@@ -127,21 +127,21 @@ module Lita::Handlers::Conferenz
 
     def define_static_routes
       self.class.route(
-        %r{^conferenz\s+worst},
+        %r{^conferenz\s+niche},
         :list_worst,
         command: true,
         help: { t("help.list_worst_key") => t("help.list_worst_value") }
       )
 
       self.class.route(
-        %r{^conferenz\s+best},
+        %r{^conferenz\s+popular},
         :list_best,
         command: true,
         help: { t("help.list_best_key") => t("help.list_best_value") }
       )
 
       self.class.route(
-        %r{^conferenz\s+modified\s+.+},
+        %r{^conferenz\s+attendees\s+.+},
         :modified,
         command: true,
         help: { t("help.modified_key") => t("help.modified_value") }

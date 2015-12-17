@@ -21,7 +21,7 @@ en:
           unlink_key: TERM1 -= TERM2
           unlink_value: Unlinks TERM2 from TERM1.
           list_worst_key: "conferenz worst [N]"
-          list_worst_value: Lists the bottom N terms by conferenz. N defaults to 5.
+          list_worst_value: Lists the bottom N conferences by conferenz. N defaults to 5.
           list_best_key: "conferenz best [N]"
           list_best_value: Lists the top N terms by conferenz. N defaults to 5.
           modified_key: conferenz modified TERM

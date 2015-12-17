@@ -18,9 +18,9 @@ describe Lita::Handlers::Conferenz::Chat, lita_handler: true do
   it { is_expected.to route("foo++ bar").to(:increment) }
   it { is_expected.to route("foo-- bar").to(:decrement) }
   it { is_expected.to route("foo~~").to(:check) }
-  it { is_expected.to route_command("conferenz best").to(:list_best) }
-  it { is_expected.to route_command("conferenz worst").to(:list_worst) }
-  it { is_expected.to route_command("conferenz modified foo").to(:modified) }
+  it { is_expected.to route_command("conferenz popular").to(:list_best) }
+  it { is_expected.to route_command("conferenz niche").to(:list_worst) }
+  it { is_expected.to route_command("conferenz attendees foo").to(:modified) }
   it do
     is_expected.to route_command("conferenz delete").with_authorization_for(:karma_admins).to(:delete)
   end
@@ -140,8 +140,8 @@ describe Lita::Handlers::Conferenz::Chat, lita_handler: true do
 MSG
       end
 
-      it 'lists the bottom 5 terms when passed "worst"' do
-        send_command("conferenz worst")
+      it 'lists the bottom 5 terms when passed "niche"' do
+        send_command("conferenz niche")
         expect(replies.last).to eq <<-MSG.chomp
 1. five (-1)
 2. four (0)
@@ -152,7 +152,7 @@ MSG
       end
 
       it "limits the list to the count passed as the second argument" do
-        send_command("conferenz best 2")
+        send_command("conferenz popular 2")
         expect(replies.last).to eq <<-MSG.chomp
 1. one (3)
 2. two (2)
