@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-conferenz"
-  spec.version       = "1.0.0"
+  spec.version       = "1.0.1"
   spec.authors       = ["Piotr Limanowski"]
   spec.email         = ["plimanowski+conferenz@gmail.com"]
   spec.description   = %q{A Lita handler for tracking conferences attendance.}
